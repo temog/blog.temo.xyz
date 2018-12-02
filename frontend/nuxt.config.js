@@ -60,6 +60,8 @@ module.exports = {
   ],
   manifest: {
     name: 'てもぐ',
+    short_name: 'てもぐ',
+    description: 'てものブログ',
     lang: 'ja',
     theme_color: '#cccccc',
     background_color: '#cccccc'
