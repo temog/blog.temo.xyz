@@ -55,8 +55,19 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
+  workbox: {
+    dev: true, // 開発でも pwa
+    runtimeCaching: [
+      {
+        urlPattern: 'https://fonts.gstatic.com/*',
+        handler: 'cacheFirst',
+        method: 'GET'
+      }
+    ]
+  },
   /*
   ** Axios module configuration
   */
