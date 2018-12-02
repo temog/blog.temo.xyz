@@ -71,7 +71,17 @@ func SaveEyecatch(fileName string, dataUrl string) bool {
 		return false
 	}
 
-	filePath := Util.CurrentDir() + "/../../public/image/eyecatch/" + fileName
+	eyecatchDir := Util.CurrentDir() + "/../../public/image/eyecatch/"
+	// ディレクトリなかったら作る
+	if _, err = os.Stat(eyecatchDir); os.IsNotExist(err) {
+		err = os.Mkdir(eyecatchDir, 0775)
+		if err != nil {
+			Util.Dump(err)
+			return false
+		}
+	}
+
+	filePath := eyecatchDir + fileName
 	file, err := os.Create(filePath)
 	if err != nil {
 		Util.Dump(err)

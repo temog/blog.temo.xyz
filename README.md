@@ -26,6 +26,7 @@ module.exports = {
 
 
 ```
+npm install
 npm run build
 ```
 
@@ -129,3 +130,43 @@ go run task/createUser.go アカウント パスワード
 gin run main.go
 ```
 
+# nginx (development sample)
+
+```
+map $http_accept $webp_suffix {
+  default   "";
+  "~*image/webp"  ".webp";
+}
+
+server {
+    listen       8080;
+    server_name  dev.blog.temo.xyz;
+
+    root /var/www/blog.temo.xyz/frontend/dist;
+    index index.html;
+    charset utf-8;
+
+    location /api {
+        proxy_pass http://127.0.0.1:3000;
+    }
+
+    location /image {
+      alias /var/www/blog.temo.xyz/backend/public/image;
+      location ~* \.(png|jpe?g)$ {
+        add_header Vary Accept;
+        try_files $uri$webp_suffix $uri =404;
+      }
+    }
+
+    gzip on;
+    gzip_types text/css application/javascript application/json application/font-woff application/font-tff application/octet-stream;
+
+    etag off;
+    add_header X-Frame-Options SAMEORIGIN;
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Content-Type-Options nosniff;
+    client_max_body_size 10M;
+    client_header_buffer_size 1k;
+    large_client_header_buffers 4 8k;
+}
+```
