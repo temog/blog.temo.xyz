@@ -58,6 +58,12 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
+  manifest: {
+    name: 'てもぐ',
+    lang: 'ja',
+    theme_color: '#cccccc',
+    background_color: '#cccccc'
+  },
   workbox: {
     dev: true, // 開発でも pwa
     runtimeCaching: [
