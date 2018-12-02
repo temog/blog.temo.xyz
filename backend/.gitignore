@@ -1,0 +1,8 @@
+logs/error/*
+public/image/*
+task/*.json
+
+gin-bin
+main
+.env
+
