@@ -11,11 +11,6 @@ class Util {
     axios.defaults.headers.common.Authorization = token
   }
 
-  static test () {
-    console.log('aaaaaaaaa')
-    console.log(this.store)
-  }
-
   /* api start */
   static async api (url, data) {
     url = process.env.apiBaseUrl + url
