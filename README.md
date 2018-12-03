@@ -20,7 +20,8 @@ env.production.js
 ```
 module.exports = {
   apiBaseUrl: 'https://xxxxxxxx/api/',
-  imageBaseUrl: 'http://xxxxxxxx/image/'
+  imageBaseUrl: 'http://xxxxxxxx/image/',
+  analyticsTrackingId: 'Google Analytics Tracking Id'
 }
 ```
 
@@ -83,7 +84,8 @@ env.development.js
 ```
 module.exports = {
   apiBaseUrl: 'http://localhost:8080/api/',
-  imageBaseUrl: 'http://localhost:8080/image/'
+  imageBaseUrl: 'http://localhost:8080/image/',
+  analyticsTrackingId: 'Google Analytics Tracking Id'
 }
 ```
 
