@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import HeaderComponent from '@/components/Header'
 import LoadingComponent from '@/components/Loading'
 import ModalComponent from '@/components/Modal'
@@ -20,8 +21,15 @@ export default {
     ModalComponent,
     MessageComponent
   },
-  mounted () {
-    console.log('Hoge')
+  watch: {
+    '$route' (route) {
+      if (route.name !== 'archives-tagName-alias') {
+        document.title = this.title
+      }
+    }
+  },
+  computed: {
+    ...mapGetters(['title'])
   }
 }
 </script>

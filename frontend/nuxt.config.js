@@ -67,7 +67,7 @@ module.exports = {
     background_color: '#cccccc'
   },
   workbox: {
-    dev: true, // 開発でも pwa
+    // dev: true, // 開発でも pwa
     runtimeCaching: [
       {
         urlPattern: 'https://fonts.gstatic.com/*',

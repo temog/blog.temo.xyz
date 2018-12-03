@@ -4,7 +4,7 @@ import Util from '@/plugins/util'
 const createStore = () => {
   return new Vuex.Store({
     state: () => ({
-      counter: 0,
+      title: null,
       token: localStorage.getItem('token'),
       loading: false,
       showIndex: false,
@@ -181,6 +181,9 @@ const createStore = () => {
       }
     },
     mutations: {
+      setTitle (state, title) {
+        state.title = title
+      },
       startLoading (state) {
         state.loading = true
       },
@@ -266,6 +269,7 @@ const createStore = () => {
         state.image.tag = tag
       },
       setArticle (state, article) {
+        document.title = article.title + ' - ' + state.title
         state.article = article
       },
       setArticles (state, data) {
@@ -288,6 +292,7 @@ const createStore = () => {
       }
     },
     getters: {
+      title: state => state.title,
       isSignIn: state => state.token !== null,
       loading: state => state.loading,
       showIndex: state => state.showIndex,
