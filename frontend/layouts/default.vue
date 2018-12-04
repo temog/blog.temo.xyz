@@ -21,13 +21,6 @@ export default {
     ModalComponent,
     MessageComponent
   },
-  watch: {
-    '$route' (route) {
-      if (route.name !== 'archives-tagName-alias') {
-        document.title = this.title
-      }
-    }
-  },
   computed: {
     ...mapGetters(['title'])
   }

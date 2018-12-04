@@ -1,81 +1,81 @@
-importScripts('/_nuxt/workbox.dev.4c4f5ca6.js')
+importScripts('/_nuxt/workbox.4c4f5ca6.js')
 
 workbox.precaching.precacheAndRoute([
   {
-    "url": "/_nuxt/02e8992c04196e758682.js",
-    "revision": "40d5972e2a98d40c9a5438cb763f4305"
+    "url": "/_nuxt/1ee022d689b45df95842.js",
+    "revision": "d9aed54c8fb695555069105b49cf48b8"
   },
   {
-    "url": "/_nuxt/084e42e2a532b51b24df.js",
-    "revision": "27ecfef269f924de19823ecf9910cbcf"
+    "url": "/_nuxt/4b92555c685b24ac4885.js",
+    "revision": "f9eb73ab53f6941279592203179d599f"
   },
   {
-    "url": "/_nuxt/182c694c6fa67aeb5f8e.js",
-    "revision": "3ad5ae58fb3b42d389ab4e506fb477e9"
+    "url": "/_nuxt/57c43d2615438f0af440.js",
+    "revision": "c2f8316d553c85b928ac39c67d2a305f"
   },
   {
-    "url": "/_nuxt/1841f9515727cac5bd1e.js",
-    "revision": "4b823406cf7b21d9bb5e7f4ae18a7575"
+    "url": "/_nuxt/5a1c85b8805d7d51620b.js",
+    "revision": "537cf11e8335fdae0039352524610688"
   },
   {
-    "url": "/_nuxt/205a84afb3588b24218a.js",
-    "revision": "0f428885aa7b7a20b7db914dbb74f79c"
+    "url": "/_nuxt/5e4dbd5c45836ac81aa5.js",
+    "revision": "349d336655cbebe926755826b4d22bc1"
   },
   {
-    "url": "/_nuxt/242ffada911700eb37df.js",
-    "revision": "40198d592323de43cc775707c55ae7ce"
+    "url": "/_nuxt/5ea8ef74a598d6b3ff9a.js",
+    "revision": "74f310c2e53f2620d0637599b5b25cd4"
   },
   {
-    "url": "/_nuxt/2997ed9e7b21c8212374.js",
-    "revision": "a2fedc77ade0aa5f0b5ef382d99ec323"
+    "url": "/_nuxt/670cbfe4ad5060b769cf.js",
+    "revision": "09589a0dbf6ebacaa08c4e78e27fe2f0"
   },
   {
-    "url": "/_nuxt/35420c15ebcf19b29c51.js",
-    "revision": "7ab00c055d82275bc047bace8b61a55d"
+    "url": "/_nuxt/6a74dd6d8762d28bedbc.js",
+    "revision": "4e70cd62099b9a85a0952b81d67de504"
   },
   {
-    "url": "/_nuxt/505ae3c1c545db07c307.js",
-    "revision": "b64c62b839f835b8f5fffbeb3f0501d3"
+    "url": "/_nuxt/6fd99a1ccc0d8c410e80.js",
+    "revision": "acfe95a00285700ff796ebe608f36e59"
   },
   {
-    "url": "/_nuxt/5459f85fe762d291e154.js",
-    "revision": "a3833ff44959cd8e3e5e05e15840435d"
+    "url": "/_nuxt/70eb1d2411dc324ebef3.js",
+    "revision": "0ac9efb73907d1fa34e163cb7b537d8a"
   },
   {
-    "url": "/_nuxt/69acc3be7fee93a3dbf3.js",
-    "revision": "0764727302f321af71049aa9fde05608"
+    "url": "/_nuxt/772aa63e7e5997507295.js",
+    "revision": "5c20a749aa0c11828eeac56af728dac7"
   },
   {
-    "url": "/_nuxt/73bb6cff3c1033ca85b1.js",
-    "revision": "f2ebe2fa9f407fecb0f03860a5a86bfe"
+    "url": "/_nuxt/88c9ab9b94c45cee764a.js",
+    "revision": "0129bef9ca6e8d5e4fc5dfbd05e73084"
   },
   {
-    "url": "/_nuxt/7a3717a8454b4cb09dde.js",
-    "revision": "0478e19fb112fab68f34a3eaa2f9b5d2"
+    "url": "/_nuxt/aa22e14f7e72f05e37d6.js",
+    "revision": "06de25f100bc60e2c341616055d0daa4"
   },
   {
-    "url": "/_nuxt/82e2bbe6a7839ed0d6ba.js",
-    "revision": "3ca7310357b03007848bd048a6dc34af"
+    "url": "/_nuxt/adfe75e22c54ced9d64e.js",
+    "revision": "1d126e73f2a65ea9dce12b94100f4cb9"
   },
   {
-    "url": "/_nuxt/8b54690d1fa4eeec37e1.js",
-    "revision": "11a0edbfc78cc0dac315ed5142ddfc49"
+    "url": "/_nuxt/c87d699d7ef7bbd529c6.js",
+    "revision": "9ec5eddddfedd95ef71dda1935733eef"
   },
   {
-    "url": "/_nuxt/9815900ecaf5b2e987e3.js",
-    "revision": "510a549874a73aecb0ebe9db5a90d1f3"
+    "url": "/_nuxt/cf48c446953caf0e0943.js",
+    "revision": "44c67c807bf1861cbc376ac6c9da5b26"
   },
   {
-    "url": "/_nuxt/ad0572f1f5136208f96e.js",
-    "revision": "06f6219b37619539d86914f3273eb9f8"
+    "url": "/_nuxt/dde7cb00b5baf76b08cb.js",
+    "revision": "d400b215d3913bf6b4aa82d202384224"
   },
   {
-    "url": "/_nuxt/ae88df5b5fab60b1b274.js",
-    "revision": "93bbdd9bd83ffaa87e98198a9f4d7988"
+    "url": "/_nuxt/e239c8e4657910f712d7.js",
+    "revision": "26e2a85674cdccb6bf7bb8e120a979c9"
   },
   {
-    "url": "/_nuxt/fd63c3ce10ee6210b114.js",
-    "revision": "22a487e54f07b6a31e443e73ef0b1194"
+    "url": "/_nuxt/e9c42f774717a8b876ae.js",
+    "revision": "10cef785085c046611658928028ca189"
   }
 ], {
   "cacheId": "blog.temo.xyz",
