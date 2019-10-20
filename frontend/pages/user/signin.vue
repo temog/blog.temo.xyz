@@ -24,7 +24,6 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import Util from '@/plugins/util'
 export default {
   data () {
     return {
@@ -38,7 +37,6 @@ export default {
     }
   },
   mounted () {
-    Util.test()
   },
   watch: {
     isSignIn (value) {

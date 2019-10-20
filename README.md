@@ -88,8 +88,8 @@ env.development.js
 
 ```
 module.exports = {
-  apiBaseUrl: 'http://localhost:8080/api/',
-  imageBaseUrl: 'http://localhost:8080/image/',
+  apiBaseUrl: 'https://blog.temo.local/api/',
+  imageBaseUrl: 'https://blog.temo.local/image/',
   analyticsTrackingId: 'Google Analytics Tracking Id'
 }
 ```
@@ -120,7 +120,7 @@ cd backend
 ```
 DB_NAME=databaseName
 DB_HOST=localhost
-ALLOW_ORIGINS=http://localhost:3333
+ALLOW_ORIGINS=https://blog.temo.local
 ```
 
 collection + index 作成
@@ -139,7 +139,22 @@ go run task/createUser.go アカウント パスワード
 gin run main.go
 ```
 
-# nginx (development sample)
+## nginx (development sample)
+
+ssl 作成 (mac)
+
+```
+cd docker/ssl
+mkcert "*.temo.local"
+```
+
+nginx install
+
+```
+brew install nginx
+```
+
+/usr/local/etc/nginx/servers/blog.conf
 
 ```
 map $http_accept $webp_suffix {
@@ -148,23 +163,32 @@ map $http_accept $webp_suffix {
 }
 
 server {
-    listen       8080;
-    server_name  dev.blog.temo.dev;
+    listen       443 ssl http2;
+    server_name  blog.temo.local;
 
-    root /var/www/blog/frontend/dist;
     index index.html;
     charset utf-8;
 
+    ssl_certificate /repository_path/src/docker/ssl/_wildcard.temo.local.pem;
+    ssl_certificate_key /repository_path/docker/ssl/_wildcard.temo.local-key.pem;
+    ssl_protocols TLSv1.2;
+
+    # local go
     location /api {
-        proxy_pass http://127.0.0.1:3000;
+        proxy_pass http://127.0.0.1:8081;
     }
 
     location /image {
-      alias /var/www/blog/backend/public/image;
+      alias /repository_path/backend/public/image;
       location ~* \.(png|jpe?g)$ {
         add_header Vary Accept;
         try_files $uri$webp_suffix $uri =404;
       }
+    }
+
+    # local node dev server
+    location / {
+        proxy_pass http://127.0.0.1:3333;
     }
 
     gzip on;
@@ -178,4 +202,11 @@ server {
     client_header_buffer_size 1k;
     large_client_header_buffers 4 8k;
 }
+```
+
+## mongodb
+
+```
+cd docker
+docker-compose up -d
 ```
