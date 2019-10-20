@@ -78,7 +78,7 @@ workbox.precaching.precacheAndRoute([
     "revision": "10cef785085c046611658928028ca189"
   }
 ], {
-  "cacheId": "blog.temo.xyz",
+  "cacheId": "blog",
   "directoryIndex": "/",
   "cleanUrls": false
 })

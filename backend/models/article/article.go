@@ -11,10 +11,10 @@ package Article
 
 import (
 	"errors"
-	"github.com/temog/blog.temo.xyz/backend/models/image"
-	"github.com/temog/blog.temo.xyz/backend/models/mongo"
-	"github.com/temog/blog.temo.xyz/backend/models/tag"
-	"github.com/temog/blog.temo.xyz/backend/util"
+	"github.com/temog/blog/backend/models/image"
+	"github.com/temog/blog/backend/models/mongo"
+	"github.com/temog/blog/backend/models/tag"
+	"github.com/temog/blog/backend/util"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"net/url"

@@ -1,7 +1,7 @@
 package Mongo
 
 import (
-	"github.com/temog/blog.temo.xyz/backend/util"
+	"github.com/temog/blog/backend/util"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"os"

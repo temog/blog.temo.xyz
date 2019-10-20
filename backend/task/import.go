@@ -10,9 +10,9 @@ import (
 	"encoding/json"
 	"flag"
 	"github.com/joho/godotenv"
-	"github.com/temog/blog.temo.xyz/backend/models/article"
-	"github.com/temog/blog.temo.xyz/backend/models/tag"
-	"github.com/temog/blog.temo.xyz/backend/util"
+	"github.com/temog/blog/backend/models/article"
+	"github.com/temog/blog/backend/models/tag"
+	"github.com/temog/blog/backend/util"
 	"io/ioutil"
 )
 

@@ -9,8 +9,8 @@ package main
 import (
 	"flag"
 	"github.com/joho/godotenv"
-	"github.com/temog/blog.temo.xyz/backend/models/user"
-	"github.com/temog/blog.temo.xyz/backend/util"
+	"github.com/temog/blog/backend/models/user"
+	"github.com/temog/blog/backend/util"
 )
 
 func main() {

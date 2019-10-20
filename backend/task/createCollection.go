@@ -8,9 +8,9 @@ package main
 
 import (
 	"github.com/joho/godotenv"
-	"github.com/temog/blog.temo.xyz/backend/models/article"
-	"github.com/temog/blog.temo.xyz/backend/models/tag"
-	"github.com/temog/blog.temo.xyz/backend/models/user"
+	"github.com/temog/blog/backend/models/article"
+	"github.com/temog/blog/backend/models/tag"
+	"github.com/temog/blog/backend/models/user"
 )
 
 func main() {

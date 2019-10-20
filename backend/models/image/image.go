@@ -7,7 +7,7 @@ package Image
 
 import (
 	"encoding/base64"
-	"github.com/temog/blog.temo.xyz/backend/util"
+	"github.com/temog/blog/backend/util"
 	"os"
 	"os/exec"
 	"strings"

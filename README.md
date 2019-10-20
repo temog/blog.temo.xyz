@@ -1,4 +1,4 @@
-# blog.temo.xyz
+# blog
 
 ブログ
 
@@ -14,9 +14,10 @@
 cd frontend
 ```
 
-api のURLと 画像の base url を定義
+api の URL と 画像の base url を定義
 
 env.production.js
+
 ```
 module.exports = {
   apiBaseUrl: 'https://xxxxxxxx/api/',
@@ -24,7 +25,6 @@ module.exports = {
   analyticsTrackingId: 'Google Analytics Tracking Id'
 }
 ```
-
 
 ```
 npm install
@@ -34,6 +34,7 @@ npm run build
 ## backend
 
 cwebp が使えること
+
 ```
 Centos7
 yum install libwebp-tools
@@ -47,6 +48,7 @@ cd backend
 ```
 
 .env 作成
+
 ```
 DB_NAME=databaseName
 DB_HOST=localhost
@@ -54,21 +56,23 @@ ALLOW_ORIGINS=https://xxxxxxxx
 ```
 
 collection + index 作成
+
 ```
 go run task/createCollection.go
 ```
 
 ユーザ作成
+
 ```
 go run task/createUser.go アカウント パスワード
 ```
 
 build + start
+
 ```
 go build main.go
 ./main &
 ```
-
 
 # install (development)
 
@@ -78,9 +82,10 @@ go build main.go
 cd frontend
 ```
 
-api のURLと 画像の base url を定義
+api の URL と 画像の base url を定義
 
 env.development.js
+
 ```
 module.exports = {
   apiBaseUrl: 'http://localhost:8080/api/',
@@ -88,7 +93,6 @@ module.exports = {
   analyticsTrackingId: 'Google Analytics Tracking Id'
 }
 ```
-
 
 ```
 npm install
@@ -98,6 +102,7 @@ npm run dev
 ## backend
 
 cwebp が使えること
+
 ```
 Centos7
 yum install libwebp-tools
@@ -111,6 +116,7 @@ cd backend
 ```
 
 .env 作成
+
 ```
 DB_NAME=databaseName
 DB_HOST=localhost
@@ -118,15 +124,16 @@ ALLOW_ORIGINS=http://localhost:3333
 ```
 
 collection + index 作成
+
 ```
 go run task/createCollection.go
 ```
 
 ユーザ作成
+
 ```
 go run task/createUser.go アカウント パスワード
 ```
-
 
 ```
 gin run main.go
@@ -142,9 +149,9 @@ map $http_accept $webp_suffix {
 
 server {
     listen       8080;
-    server_name  dev.blog.temo.xyz;
+    server_name  dev.blog;
 
-    root /var/www/blog.temo.xyz/frontend/dist;
+    root /var/www/blog/frontend/dist;
     index index.html;
     charset utf-8;
 
@@ -153,7 +160,7 @@ server {
     }
 
     location /image {
-      alias /var/www/blog.temo.xyz/backend/public/image;
+      alias /var/www/blog/backend/public/image;
       location ~* \.(png|jpe?g)$ {
         add_header Vary Accept;
         try_files $uri$webp_suffix $uri =404;

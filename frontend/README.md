@@ -1,10 +1,10 @@
-# blog.temo.xyz
+# blog
 
 > My badass Nuxt.js project
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 
