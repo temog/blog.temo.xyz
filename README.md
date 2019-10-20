@@ -149,7 +149,7 @@ map $http_accept $webp_suffix {
 
 server {
     listen       8080;
-    server_name  dev.blog;
+    server_name  dev.blog.temo.dev;
 
     root /var/www/blog/frontend/dist;
     index index.html;
